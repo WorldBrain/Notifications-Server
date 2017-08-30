@@ -1,0 +1,25 @@
+{
+  "name": "notifications-server",
+  "version": "1.0.0",
+  "description": "server-side for Notifications Admin site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WorldBrain/Notifications-Server.git"
+  },
+  "author": "VHo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WorldBrain/Notifications-Server/issues"
+  },
+  "homepage": "https://github.com/WorldBrain/Notifications-Server#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "foreman": "^2.0.0",
+    "mongoose": "^4.11.9"
+  }
+}
