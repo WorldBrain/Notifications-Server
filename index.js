@@ -8,8 +8,8 @@ const mongoose = require('mongoose');
 //other origins which return appropriate CORs headers
 const cors = require('cors');
 
-//define predetermined port number
-const port = process.env.port || 4002;
+//the server will listen to an appropriate port, or default to port 4002
+const port = process.env.PORT || 4002;
 
 //set up express app to create instances
 const app = express();
@@ -33,8 +33,17 @@ app.use(cors(corsOptions));
 app.options('*', cors(corsOptions))
 
 //set up mongoose and db connection
-mongoose.Promise = global.Promise;
-mongoose.connect(mongouri);
+// mongoose.Promise = global.Promise;
+
+//makes connection asynchronously.  Mongoose will queue up db
+//operations and release them when the connection is complete
+mongoose.connect(mongouri, function (err, res) {
+  if (err) {
+    console.log('ERROR connecting to: ' + mongouri + '. ' + err);
+  } else {
+    console.log('Succeeded connected to: ' + mongouri);
+  }
+});
 
 //use body-parser middleware to look for JSON data in request body
 app.use(bodyParser.json());
