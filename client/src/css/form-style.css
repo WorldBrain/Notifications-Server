@@ -1,0 +1,46 @@
+form {
+  margin: 0 auto;
+  padding: 2em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  background-color: #DEDBDA;
+}
+
+form div, div {
+  margin-top: 1em;
+  max-width: 1000px;
+  min-width: 500px;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+}
+
+input, textarea {
+  font: 20px Helvetica, Verdana, sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* to highlight active elements */
+  border-color: #000;
+}
+
+textarea, #bodytextid {
+  vertical-align: top;
+  height: 5em;
+  min-width: 100%;
+  max-width: 100%;
+
+}
+
+.button {
+  padding-left: 90px;
+}
+
+button {
+  margin-left: .5em;
+}
