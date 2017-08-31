@@ -18,9 +18,9 @@ router.post('/notifications',function(req,res,next){
   req.body
   res.json({message:'json added'});
 
-  Notification.create(req.body).then(function(notification) {
-    res.send(notification);
-  }).catch();
+  // Notification.create(req.body).then(function(notification) {
+  //   res.send(notification);
+  // }).catch();
 });
 
 router.put('/notifications/:id',function(req,res,next){
