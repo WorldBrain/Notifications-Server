@@ -18,7 +18,7 @@ const NotifForm = ({ submitForm, updateTitle, updateBody }) => (
     </textarea>
     </div>
     <div>
-    <button bsStyle="primary" bsSize="medium" label="Submit" active>
+    <button label="Submit">
       Submit
     </button>
     </div>
