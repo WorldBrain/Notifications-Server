@@ -10,23 +10,32 @@ router.get('/notifications',function(req,res,next){
   })
 });
 
+// function getNotifications(req,res,next){
+//   Notification.find({}).then(function(notifications){
+//     res.send(notifications);
+//   })
+// );
+//
+// router.get('/notifications', getNotifications);
+
+
 router.post('/notifications',function(req,res,next){
-  console.log('req.method'); //"POST"
   var notification = new Notification();
   notification.title = req.body.title;
   notification.body = req.body.body;
   req.body
   res.json({message:'json added'});
+  console.log(req.body, 'req.body'); //"POST"
 
-  // Notification.create(req.body).then(function(notification) {
-  //   res.send(notification);
-  // }).catch();
+  Notification.create(req.body).then(function(notification) {
+    res.send(notification);
+  }).catch();
 });
 
 router.put('/notifications/:id',function(req,res,next){
   Notification.findByIdAndUpdate({_id:req.params.id},req.body).then(function(){
     Notification.findOne({_id:req.params.id}).then(function(notification){
-      console.log('what is happening');
+      console.log(req.body, 'what is happening');
       res.send(notification);
     });
   })
