@@ -33,7 +33,7 @@ app.use(cors(corsOptions));
 app.options('*', cors(corsOptions))
 
 //set up mongoose and db connection
-// mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
 //makes connection asynchronously.  Mongoose will queue up db
 //operations and release them when the connection is complete
