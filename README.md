@@ -7,11 +7,11 @@ The Notifications Server is a MERN stack web app using Mongo-Express-React and N
 
 Notifications are created and then posted and saved to a mongodb. On the front end, a react form posts new notifications to the database and the list maps all of the notifications.  A proxy API handles requests from the React app to the Node/Express server.  This is important because using a proxy ensures that we only need one port open, since Heroku doesn't allow multiple open ports to be deployed.
 
-##Getting Started
-The deployed webapp can be viewed at https://salty-fjord-43561.herokuapp.com/
+## Getting Started
+The deployed webapp can be viewed at [https://salty-fjord-43561.herokuapp.com/]
 
-##Installing
-After cloning the repo from https://github.com/WorldBrain/Notifications-Server please add these dependences:
+## Installing
+After cloning the repo from [https://github.com/WorldBrain/Notifications-Server] please add these dependences:
 
 Express: framework to set up and handle requests to our Node.js Server
 Body-Parser: parses incoming request bodies of new Notifications in JSON format
@@ -28,13 +28,13 @@ $ npm i express body-parser cors nodemon mongoose --saved
 Start the server and express app:
 $ npm start
 
-##Testing routes
-To create, read, update and delete notifications, using the routes specified in routes/api.js, we can use Postman.
+## Testing routes
+To create, read, update and delete notifications, using the routes specified in (./routes/api.js) we can use Postman.
 
-#Viewing mongodb data
+## Viewing mongodb data
 To interact with MongoDB, you can either use Robomongo or Studio 3t (download whichever is most convenient).  It should automatically connect with mongo and you can create view the Notifications collection
 
-##Deploying
+## Deploying
 This project was created and deployed with Heroku.  First, the node server and mongo db were configured to show the notifications API.  The server and db were then deployed to Heroku.  In our heroku deploy commands, we also need a .gitignore file to ignore node_modules.
 
 Deploy commands (after logging into Heroku):
@@ -65,4 +65,4 @@ After creating our react components, we then need to re-deploy the webapp. We wa
 Then for the final deploy to Heroku:
 $ git add .
 $ git commit -m "ready to deploy react app"
-$ git push heroku master
+$ git push heroku master 
