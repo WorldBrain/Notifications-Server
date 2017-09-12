@@ -20,7 +20,7 @@ Nodemon: automatically restarts server each time a file is saved
 Mongoose: provides methods and schema to interact with mongodb.  Note use version 4.10.8 to avoid deprecation warnings with promises.st
 
 Initialize the project:
-$ npm init-y
+$ npm init -y
 
 Install using:
 $ npm i express body-parser cors nodemon mongoose --saved
@@ -29,7 +29,10 @@ Start the server and express app:
 $ npm start
 
 ##Testing routes
-To create, read, update and delete notifications, we can use Postman.
+To create, read, update and delete notifications, using the routes specified in routes/api.js, we can use Postman.
+
+#Viewing mongodb data
+To interact with MongoDB, you can either use Robomongo or Studio 3t (download whichever is most convenient).  It should automatically connect with mongo and you can create view the Notifications collection
 
 ##Deploying
 This project was created and deployed with Heroku.  First, the node server and mongo db were configured to show the notifications API.  The server and db were then deployed to Heroku.  In our heroku deploy commands, we also need a .gitignore file to ignore node_modules.
@@ -52,7 +55,7 @@ A proxy script in the package.json ensures that a proxy API handles requests fro
 
 "proxy": "http://localhost:4002"
 
-After creating our react components, we then need to re-deploy the webapp.  Because we want to check in our new client code, build create-react-app, install dependencies and production dependencies.  For this, we require the following post-build script in root package.json:
+After creating our react components, we then need to re-deploy the webapp. We want to check in our new client code, build create-react-app, install dependencies and production dependencies.  For this, we require the following post-build script in root package.json:
 
 "scripts": {
   "start": "node index.js",
