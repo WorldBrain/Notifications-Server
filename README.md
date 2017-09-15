@@ -23,10 +23,15 @@ Initialize the project:
 $ npm init -y  
 
 Install using:  
-$ npm i express body-parser cors nodemon mongoose --saved  
+$ npm i express body-parser cors nodemon mongoose --saved    
 
-Start the server and express app:  
+Start the server and express api app:  
 $ npm start  
+(should be running on localhost:4001/api/notifications)  
+
+Start the client react app - cd into /client:  
+$ npm start  
+(should be running on localhost:3000)  
 
 ## Testing routes
 To create, read, update and delete notifications, using the routes specified in (./routes/api.js) we can use Postman.
