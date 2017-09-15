@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 const Notification = require('../model/notifications');
 
 
@@ -10,6 +11,13 @@ router.get('/notifications',function(req,res,next){
   })
 });
 
+// router.get('/login', function(req,res) {
+//   res.sendFile(path.join(__dirname+'/login.html'));
+// });
+//
+// router.get('/login/now', function(req,res) {
+//   res.redirect('./client/')
+// })
 // function getNotifications(req,res,next){
 //   Notification.find({}).then(function(notifications){
 //     res.send(notifications);
